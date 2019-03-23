@@ -1,14 +1,4 @@
-from django.shortcuts import render, HttpResponse
-
-html_base = """
-<h1>Mi web personal</h1>
-<ul>
-    <li><a href='/'>Portada</a></li>
-    <li><a href='/portafolio/'>Portafolio</a></li>
-    <li><a href='/about-me/'>Acerca de</a></li>
-    <li><a href='/contact/'>Contacto</a></li>
-</ul>
-"""
+from django.shortcuts import render
 
 
 # Create your views here.
