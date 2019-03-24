@@ -25,3 +25,10 @@ urlpatterns = [
     path('portafolio/', views.portafolio, name='portafolio'),
     path('contact/', views.contact, name='contact'),
 ]
+
+""" Configurar entorn de desenvolupament perque el servidor de prova pugui servir arxius multimedia """
+from django.conf import settings
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
