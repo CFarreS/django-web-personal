@@ -16,14 +16,15 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from core import views
+from core import views as core_views
+from portfolio import views as portfolio_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('about-me/', views.about, name='about'),
-    path('portafolio/', views.portafolio, name='portafolio'),
-    path('contact/', views.contact, name='contact'),
+    path('', core_views.home, name='home'),
+    path('about-me/', core_views.about, name='about'),
+    path('portafolio/', portfolio_views.portafolio, name='portafolio'),
+    path('contact/', core_views.contact, name='contact'),
 ]
 
 """ Configurar entorn de desenvolupament perque el servidor de prova pugui servir arxius multimedia """
